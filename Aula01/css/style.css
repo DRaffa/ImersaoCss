@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('https://1.bp.blogspot.com/-ycEQ2OrCr9Q/XV7X-Gl3xoI/AAAAAAAALj4/MZ4ZD0Mpfv4LNNHXKy2-eP58Mh245qazQCLcBGAs/w914-h514-p-k-no-nu/luffy-vs-big-mom-one-piece-pirate-warriors-4-uhdpaper.com-8K-3.688-wp.thumbnail.jpg');
+    background-size: auto 100vh;
+    /*
+        background-size largura     altura
+                        auto        500px
+                        50px        100vh
+                        100vw       100vh
+    */  
+    height: 100vh;
+}
+
+.menu {
+    background-color: white;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    color: teal;
+    text-decoration: none; /*Removendo o underline do link*/
+}
+
+a :hover {
+    text-decoration: underline;
+}
+
+.site-subtitle,
+.site-title {
+    color: white;
+    text-align: center;
+}
+
+.site-subtitle {
+    font-style: italic;
+}
