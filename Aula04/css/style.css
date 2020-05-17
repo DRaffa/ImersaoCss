@@ -1,0 +1,276 @@
+/*  
+    soft reset do css
+    * site exemplo https://meyerweb.com/eric/tools/css/reset/
+
+    Tudo que for incluido entre chaves vai ser aplicado na iniciacao 
+    Seletor mais generico
+
+
+    display:Flex  tudo que vai apos este cara as tags viram tudo coluna
+    entretando nav e div sao colunas
+    
+*/
+
+/*
+    Fonts family do "font.google"
+
+    * font-family: 'Allura', cursive; --Assinatura
+    * font-family: 'Courgette', cursive; --Padrão
+    * font-family: 'Monoton', cursive; --Titulo temporario
+    * font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Fredericka the Great', cursive;
+    
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courgette", cursive;
+  background-image: url("https://1.bp.blogspot.com/-ycEQ2OrCr9Q/XV7X-Gl3xoI/AAAAAAAALj4/MZ4ZD0Mpfv4LNNHXKy2-eP58Mh245qazQCLcBGAs/w914-h514-p-k-no-nu/luffy-vs-big-mom-one-piece-pirate-warriors-4-uhdpaper.com-8K-3.688-wp.thumbnail.jpg");
+  background-size: auto 100vh;
+  /*
+        background-size largura     altura
+                        auto        500px
+                        50px        100vh
+                        100vw       100vh
+    */
+  height: 100vh;
+
+  font-size: 10px;
+}
+
+/*
+    se a minha tela tiver pelo menos 400px vai carregar estes estilos ou seja quando for maior ou igual a 400px
+    entra dentro da minha condicao
+
+    @media conhecido como breakpoint
+*/
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 22px;
+  }
+}
+
+header {
+  height: 100vh;
+  /*  */
+  display: flex;
+  /*Alinhamento vertical*/
+  justify-content: center;
+  /*Alinhamento horizontal*/
+  align-items: center;
+}
+
+.menu {
+  background-color: white;
+
+  /*Mantendo o Menu fixo apos*/
+  position: fixed;
+  width: 100vw;
+  /*so funciona com position declarado*/
+  top: 0;
+  z-index: 1;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu a {
+  /* Transformando o link em bloco */
+  display: block;
+  padding: 10px 20px;
+  /* todas as propriedades que queremos a mudanca de transicao*/
+  transition: background-color 1s, color 1s;
+}
+
+.menu a:hover {
+  background-color: teal;
+  color: whitesmoke;
+}
+
+.menu a:active {
+  color: whitesmoke;
+  background-color: red;
+}
+
+a {
+  color: teal;
+  text-decoration: none; /*Removendo o underline do link*/
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.titulo {
+
+  animation:  linear 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+  /* trabalha com porcentagem */
+  /* inicio */
+  0% {
+  /*diminuir a escala quando coloca zero*/
+  transform: scale(0) translateY(50vh);
+  /*opacity zero fica transaparente e um e visivel*/
+  opacity: 0;
+  }
+
+  /* completo */
+  100%{
+  /*diminuir a escala quando coloca zero*/
+  transform: scale(1) translateY(0);
+  /*opacity zero fica transaparente e um e visivel*/
+  opacity: 1;
+  }
+}
+
+.site-subtitle,
+.site-title {
+  color: white;
+  text-align: center;
+}
+
+.site-title {
+  /* deixar a fonte 4x o tamanho da font do body*/
+  font-size: 4em;
+  font-family: "Fredericka the Great", cursive;
+}
+
+.site-subtitle {
+  font-style: italic;
+  line-height: 1.5em; /* altura da linha*/
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+.contato,
+.portifolio {
+  padding: 2em;
+  min-height: calc(100vh - 20px);
+}
+
+/* 
+    Nivel de hierarquia grid dentro do portifolio
+    grid não forca coluna
+*/
+.portifolio .grid {
+  display: grid;
+  /*define o especamento entre colunas e linhas*/
+  gap: 2em;
+  /*
+        Definindo as colunas da GridView
+        Todo mundo vai trazer duas colunas
+        grid-template-columns: 240px 240px;
+    */
+}
+
+@media (min-width: 720px) {
+  .portifolio .grid {
+    grid-template-columns: 260px 260px;
+    align-content: center;
+    justify-content: center;
+    /*calc o operador tem que ser separado*/
+    height: calc(100vh - 5.5em - 48px);
+  }
+}
+
+@media (min-width: 850px) {
+  .portifolio .grid {
+    /* grid-template-columns: 240px 240px; */
+    grid-template-columns: repeat(3, 260px);
+    /*so existe para display: grid*/
+  }
+}
+
+.portifolio figure {
+  text-align: center;
+}
+
+.contato h2,
+.portifolio h2 {
+  font-family: "Courgette", cursive;
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+.img-portifolio {
+  height: 180px;
+  width: 240px;
+  /*contain proporcoes originais*/
+  /*cover deixa as imagesn com mesma relacao de altura*/
+  object-fit: cover;
+  /*pegar direcao da proporcao da imagem esquerda para abaixo*/
+  object-position: left bottom;
+  border-radius: 20px;
+
+  /*transformar um elemento*/
+  transition: transform 500ms, rotate 1s;
+}
+
+.img-portifolio:hover{
+  transform: scale(1.3) rotate(10deg);
+}
+
+/* 
+@media (min-width: 1200px) {
+  .img-portifolio {
+    height: auto;
+    width: 100%;
+  }
+}
+*/
+/*em multiplicado em cima do font-size padrao*/
+
+.contato .icons {
+  text-align: center;
+}
+
+.contato a {
+  color: black;
+  font-size: 3em;
+  transition: text-shadow 1s;
+}
+
+.contato a:hover {
+  text-decoration: none;
+  color: white;
+  /* text-shadow parametros
+    eyxo x 
+    eyxo y
+    fumacado
+    cor
+
+    rgba() o ultimo valor é a opacidade
+  */
+  /* text-shadow: 0px 0px 0px yellow; */
+  text-shadow: -6px -10px 10px rgba(255, 255, 255, 0.6);
+}
+
+.contato a:active {
+  text-decoration: none;
+  text-shadow: 0px 0px 10px black;
+}
