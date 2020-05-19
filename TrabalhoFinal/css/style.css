@@ -29,10 +29,18 @@
 
 body {
   font-family: "Courgette", cursive;
-  background-image: 
+  
     /* top, transparent red */
-    linear-gradient(90deg, rgba(31,28,79,0.5) 0%, rgba(0,0,238,0.5) 35%, rgba(74,225,255,0.5) 100%),
-    url("../img/fundo.jpg");
+    background-image : rgb(31,28,79);
+    background-image : -moz-linear-gradient(90deg, rgba(31,28,79,0.6) 0%, rgba(0,0,238,0.6) 35%, rgba(74,225,255,0.6) 100%), url("../img/fundo.jpg");
+    background-image : -webkit-linear-gradient(90deg, rgba(31,28,79,0.6) 0%, rgba(0,0,238,0.6) 35%, rgba(74,225,255,0.6) 100%), url("../img/fundo.jpg");
+    background-image : linear-gradient(90deg, rgba(31,28,79,0.6) 0%, rgba(0,0,238,0.6) 35%, rgba(74,225,255,0.6) 100%), url("../img/fundo.jpg");
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1f1c4f",endColorstr="#4ae1ff",GradientType=1), url("../img/fundo.jpg");
+  
+
+
+    
+    
   background-size: auto 100vh;
   /*
         background-size largura     altura
@@ -155,7 +163,7 @@ a:hover {
 
 .site-subtitle,
 .site-title {
-  color: white;
+  color: whitesmoke;
   text-align: center;
 }
 
@@ -173,20 +181,17 @@ a:hover {
 }
 
 .sobre,
-.contato,
 .portifolio {
   padding: 2em;
   min-height: 100vh;
-
   /*mantendo os conteudos dos conainer alinhados no centro*/
   margin-left: auto;
   margin-right: auto;
 }
 
 .contato {
-  height: 260px;
-  min-height: 260px;
-  background: bottom;
+  height: 6em;
+  padding: 15px 0px;
   background: linear-gradient(90deg, rgb(31, 28, 79) 0%, rgb(0, 0, 238) 35%, rgb(74, 225, 255) 100%);
 }
 
@@ -217,7 +222,7 @@ a:hover {
 
 @media (min-width: 720px) {
   .portifolio .grid {
-    grid-template-columns: 260px 260px;
+    grid-template-columns: 240px 240px;
     /*calc o operador tem que ser separado*/
     height: calc(100vh - 5.5em - 48px);
   }
@@ -226,7 +231,7 @@ a:hover {
 @media (min-width: 850px) {
   .portifolio .grid {
     /* grid-template-columns: 240px 240px; */
-    grid-template-columns: repeat(3, 260px);
+    grid-template-columns: repeat(3, 240px);
     /*so existe para display: grid*/
   }
 }
@@ -282,8 +287,8 @@ a:hover {
   /*contain proporcoes originais*/
   /*cover deixa as imagesn com mesma relacao de altura*/
   object-fit: cover;
-  /*pegar direcao da proporcao da imagem esquerda para abaixo*/
-  object-position: left bottom;
+  /*pegar direcao da proporcao da imagem centro*/
+  object-position: center;
   border-radius: 20px;
 
   /*transformar um elemento*/
@@ -329,10 +334,11 @@ a:hover {
 }
 
 .card-back {
-  background-color: white;
+  background-color: whitesmoke;
   width: 240px;
   height: 232px;
   border-radius: 20px;
+  padding: 15px;
   /*Eixo y para rodar da esquerda para a direita*/
   transform: rotateY(180deg);
 }
@@ -352,14 +358,14 @@ a:hover {
 }
 
 .contato a {
-  color: teal;
+  color: whitesmoke;
   font-size: 4em;
   transition: text-shadow 1s;
 }
 
 .contato a:hover {
   text-decoration: none;
-  color: white;
+  color: whitesmoke;
   /* text-shadow parametros
     eyxo x 
     eyxo y

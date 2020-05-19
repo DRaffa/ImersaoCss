@@ -24,12 +24,12 @@
 
 <body>
 
-    <header>
+    <header id="inicio">
         <nav class="menu">
             <ul class="container">
+                <li><a href="#inicio">Início</a></li>
                 <li> <a href="#sobre">Sobre</a></li>
-                <li><a href="#portifolio">Portifolio</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#mundoWeb">Mundo Web</a></li>
             </ul>
         </nav>
         <div class="titulo">
@@ -64,52 +64,52 @@
             Esse site foi constrido durante a <a href="https://www.alura.com.br/imersao-css">Imersão CSS da Alura</a> 👨🏻‍💻
         </p>
     </section>
-    <section class="portifolio container" id="portifolio">
-        <h2>Portfólio</h2>
+    <section class="portifolio container" id="mundoWeb">
+        <h2>Mundo Web</h2>
 
         <div class="grid">
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-portifolio" src="./img/html.jpeg" alt="HTML">
+                        <figcaption>HTML</figcaption>
+                    </figure>
+                    <div class="card-back">
+                        HTML é uma linguagem de marcação utilizada na construção de páginas na Web.
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-portifolio" src="./img/css.jpg" alt="CSS">
+                        <figcaption>CSS</figcaption>
+                    </figure>
+                    <div class="card-back">
+                        Cascading Style Sheets é um mecanismo para adicionar estilo a um documento web.
+                    </div>
+                </div>
+            </div>
 
             <div class="flip-card">
                 <div class="card">
                     <figure class="card-front">
-                        <img class="img-portifolio" src="./img/ecommerce.jpg" alt="eCommerce">
-                        <figcaption>eCommerce</figcaption>
+                        <img class="img-portifolio" src="./img/java-script.png" alt="Java Script">
+                        <figcaption>Java Script</figcaption>
                     </figure>
                     <div class="card-back">
-                        Oi eu sou a parte de tras :)
+                        JavaScript é uma linguagem de programação interpretada estruturada
                     </div>
                 </div>
             </div>
             <div class="flip-card">
                 <div class="card">
                     <figure class="card-front">
-                        <img class="img-portifolio" src="./img/mobile.png" alt="Mobile">
-                        <figcaption>Mobile</figcaption>
+                        <img class="img-portifolio" src="./img/estudar.jpg" alt="Estudar">
+                        <figcaption>Estudar</figcaption>
                     </figure>
                     <div class="card-back">
-                        Oi eu sou a parte de tras :)
-                    </div>
-                </div>
-            </div>
-            <div class="flip-card">
-                <div class="card">
-                    <figure class="card-front">
-                        <img class="img-portifolio" src="./img/web-designer.jpg" alt="Web design">
-                        <figcaption>Web design</figcaption>
-                    </figure>
-                    <div class="card-back">
-                        Oi eu sou a parte de tras :)
-                    </div>
-                </div>
-            </div>
-            <div class="flip-card">
-                <div class="card">
-                    <figure class="card-front">
-                        <img class="img-portifolio" src="./img/projetos-pessoais.png" alt="Projetos pessoais">
-                        <figcaption>Projetos pessoais</figcaption>
-                    </figure>
-                    <div class="card-back">
-                        Oi eu sou a parte de tras :)
+                        Estudar, dedicar, praticar praticar e praticar!
                     </div>
                 </div>
             </div>
@@ -117,7 +117,6 @@
     </section>
 
     <section class="contato container" id="contato">
-        <h2>Contato</h2>
         <div class="grid icons">
             <a target="_blank" href="https://github.com/draffa">
                 <i class="fab fa-github"></i>
