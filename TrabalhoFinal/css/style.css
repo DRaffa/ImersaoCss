@@ -28,7 +28,7 @@
 }
 
 body {
-  font-family: "Courgette", cursive;
+    font-family: 'Amiri', serif;
   
     /* top, transparent red */
     background-image : rgb(31,28,79);
@@ -36,12 +36,8 @@ body {
     background-image : -webkit-linear-gradient(90deg, rgba(31,28,79,0.6) 0%, rgba(0,0,238,0.6) 35%, rgba(74,225,255,0.6) 100%), url("../img/fundo.jpg");
     background-image : linear-gradient(90deg, rgba(31,28,79,0.6) 0%, rgba(0,0,238,0.6) 35%, rgba(74,225,255,0.6) 100%), url("../img/fundo.jpg");
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1f1c4f",endColorstr="#4ae1ff",GradientType=1), url("../img/fundo.jpg");
-  
-
-
     
-    
-  /* background-size: auto 100vh; */
+    background-size: 100vw 100vh;
   /*
         background-size largura     altura
                         auto        500px
@@ -114,6 +110,7 @@ header {
   padding: 10px 20px;
   /* todas as propriedades que queremos a mudanca de transicao*/
   transition: background-color 1s, color 1s;
+  font-family: 'Amiri', serif;
 }
 
 .menu a:hover {
@@ -170,14 +167,16 @@ a:hover {
 .site-title {
   /* deixar a fonte 4x o tamanho da font do body*/
   font-size: 4em;
-  font-family: 'Amiri', serif;
+  font-family: "Amiri, serif";
+  font-weight: 700;
 }
 
 .site-subtitle {
   font-style: italic;
   line-height: 1.5em; /* altura da linha*/
   font-size: 2em;
-  font-family: "Gloria Hallelujah", cursive;
+  font-family: "", cursive;
+  font-weight: 500;
 }
 
 .sobre,
@@ -224,7 +223,7 @@ a:hover {
   .portifolio .grid {
     grid-template-columns: 240px 240px;
     /*calc o operador tem que ser separado*/
-    height: calc(100vh - 5.5em - 48px);
+    /* height: calc(100vh - 5.5em - 48px); */
   }
 }
 
@@ -243,7 +242,7 @@ a:hover {
 .sobre h2,
 .contato h2,
 .portifolio h2 {
-  font-family: 'Roboto Slab', serif;
+  /* font-family: 'Roboto Slab', serif; */
   color: whitesmoke;
   margin-bottom: 1.5em;
   font-size: 2em;
@@ -258,6 +257,7 @@ a:hover {
   margin-bottom: 1em;
   text-align: justify;
   font-size: 1.5em;
+  font-family: "", cursive;
 }
 
 .sobre a {
@@ -340,6 +340,7 @@ a:hover {
   height: 232px;
   border-radius: 20px;
   padding: 15px;
+  font-family: "", cursive;
   /*Eixo y para rodar da esquerda para a direita*/
   transform: rotateY(180deg);
 }
