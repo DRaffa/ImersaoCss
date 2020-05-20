@@ -175,7 +175,7 @@ a:hover {
   font-style: italic;
   line-height: 1.5em; /* altura da linha*/
   font-size: 2em;
-  font-family: "", cursive;
+  font-family: "Amiri, serif";
   font-weight: 500;
 }
 
@@ -257,7 +257,7 @@ a:hover {
   margin-bottom: 1em;
   text-align: justify;
   font-size: 1.5em;
-  font-family: "", cursive;
+  font-family: "Amiri, serif";
 }
 
 .sobre a {
@@ -340,7 +340,7 @@ a:hover {
   height: 232px;
   border-radius: 20px;
   padding: 15px;
-  font-family: "", cursive;
+  font-family: "Amiri, serif";
   /*Eixo y para rodar da esquerda para a direita*/
   transform: rotateY(180deg);
 }
