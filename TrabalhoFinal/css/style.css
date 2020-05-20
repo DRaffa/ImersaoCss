@@ -251,10 +251,11 @@ a:hover {
   margin-top: 63px;
 }
 
+.portifolio p,
 .sobre p {
   color: whitesmoke;
   text-indent: 1.4em;
-  margin-bottom: 1.4em;
+  margin-bottom: 1em;
   text-align: justify;
   font-size: 1.5em;
 }
